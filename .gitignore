@@ -1,0 +1,4 @@
+/Win32DLL/GMRakNet_Win32/Debug
+*.sdf
+/raknet-ndk-lib/libs/
+/raknet-ndk-lib/obj/

@@ -1,0 +1,19 @@
+TO BUILD:
+
+
+WIN32 DLL:
+Open the Visual studio solution in the Win32DLL directory and build DLL file.
+
+
+Android:
+
+First we need to build the C++ files (RakNet plus the JNI interface). In order to do this, go into raknet-ndk-lib directory and run ndk-build (from the Android ndk).
+This will produce .so library files in the raknet-ndk-lib/libs directory.
+Copy the contents of the "raknet-ndk-lib/libs" directory to "RakExtension.gmx/extensions/GMRak/AndroidSource/libs" directory.
+
+When a new function is added:
+Add the function in the GMInterface, and make sure it works correctly on Windows.
+Next we have to make the Java JNI C++ code to interface with it (raknet-ndk-lib/jni/RakNetJNIWrapper.h and raknet-ndk-lib/jni/RakNetJNIWrapper.cpp)
+Next, Add the JNI native function definition in RakExtension.gmx/extensions/GMRak/AndroidSource/Java/RakNetJNIWrapper.java
+Next, add tge code in RakExtension.gmx/extensions/GMRak/AndroidSource/Java/RakNet.java which calls the native function definition in RakNetJNIWrapper.java.
+Re-Build as per instructions above.

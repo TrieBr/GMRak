@@ -1,0 +1,3 @@
+set solib-search-path ./obj/local/x86
+source C:/android-ndk-r10c/prebuilt/common/gdb/common.setup
+directory C:/android-ndk-r10c/platforms/android-9/arch-x86/usr/include jni/RakNetSources/ jni/../../GMRakNetInterface/ C:/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.6/include C:/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.6/libs/x86/include C:/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.6/include/backward
